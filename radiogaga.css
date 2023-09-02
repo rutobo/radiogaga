@@ -1,0 +1,291 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+    height: 100%;
+    background-color: rgb(61, 61, 61);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* vertically centered */
+    flex-direction: column;
+    align-items: center;
+  }
+
+p {
+    font-family: Bebas Neue;
+    font-size: 30px;
+}
+
+.spdots {
+    opacity: 1;
+    z-index: 9;
+    width: 100%;
+    height: 100%;            
+    top: 0;
+    left: 0;
+}
+
+.title {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(224, 166, 58);
+    text-shadow: 3px 3px 5px rgb(0,0,0,.3);
+    
+}
+
+.radio-gaga {
+    border-style: none;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 270px;
+    margin-bottom: 0px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: 3px 3px 5px rgb(0,0,0,.3), inset 2px 2px 3px rgba(255, 255, 255, .1), inset -3px -3px 3px rgba(0,0,0,.2);
+}
+
+.radio-box {
+    width: 800px;
+    height: 530px;
+    border-width: 3px;
+    border-style: none;
+    border-radius: 35px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 50px 0px 12px rgba(0,0,0,.1), inset 3px 3px 5px rgba(255, 255, 255, 0.2), inset -3px -3px 5px rgba(0,0,0,.30);
+}
+
+.button {
+    width: 50px;
+    height: 25px;
+    border-width: 3px;
+    border-style: none;
+    border-radius: 5px 5px 0px 0px;
+    color: rgb(161, 161, 161);
+    background-color: rgb(39, 39, 39);
+    box-shadow: 5px 5px 12px rgba(0,0,0,.0), inset 3px 3px 5px rgba(255, 255, 255, 0.2), inset -3px -3px 5px rgba(0,0,0,.10);
+    margin-left: 650px;
+    cursor: pointer;
+}
+
+.button.clicked {
+    height: 15px;
+    margin-top: 10px;
+}
+
+.chanels {
+    width: 740px;
+    height: 70px;
+    border-width: 3px;
+    border-style: none;
+    border-radius: 20px;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    box-shadow: inset 5px 5px 12px rgba(22, 22, 22, 1), inset -5px -5px 12px rgb(22, 22, 22, 0.5);
+    opacity: 1;
+    position: relative;
+    transition: 0.2s ease-out;
+}
+
+.chanels.alt-bg {
+    background-color: rgb(224, 166, 58);
+    box-shadow: inset 5px 5px 12px rgba(109, 12, 12, 0.7), inset -5px -5px 12px rgb(255, 251, 0);
+}
+
+hr {
+    width: 734px;
+    border: 1px solid;
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5); 
+}
+
+.dotted-line {
+    margin-top: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.herz {
+    margin-left: 50px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+}
+
+.hz {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    word-spacing: 70px;
+}
+
+.pointer {
+    position: absolute;
+    left: 10px;
+    width: 10px;
+    height: 40px;
+    margin-left: 0px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 3px 2px; color: rgba(0,0,0,.20);
+    z-index: 10;
+}
+
+.low-part {
+    width: 770px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-part {
+    margin-left: 30px;
+    border-width: 2px;
+    border-style: none;
+    width: 520px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-part {
+    padding-top: 10px;
+    margin-left: 42px;
+    border-width: 2px;
+    border-style: none;
+    width: 160px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker {
+    width: 520px;
+    height: 370px;
+    border-radius: 25px;
+    color: black;
+    margin-top: none;
+    margin-right: none;
+    background-color: none;
+    position: relative;
+}
+
+.tuner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: none;
+    margin-bottom: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 5px 5px 12px rgba(0,0,0,.50), inset 3px 3px 5px rgba(255, 255, 255, 0.1), inset -3px -3px 5px rgba(0,0,0,.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 5px 5px 12px rgba(0,0,0,.50), inset 3px 3px 5px rgba(255, 255, 255, 0.1), inset -3px -3px 5px rgba(0,0,0,.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    transition: color 0.2s ease-out, text-shadow .3s ease-out;
+}
+
+.info.alt-in {
+    color: rgb(60, 172, 206);
+    text-shadow: 0px 0px 10px rgb(60, 172, 206);
+}
+
+.info2 {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    transition: color 0.2s ease-out, text-shadow .3s ease-out;
+}
+
+.info2.alt-in {
+    color: rgb(60, 172, 206);
+    text-shadow: 0px 0px 10px rgb(60, 172, 206);
+}
+
+.dot {
+    width: 3px;
+    height: 3px;
+    margin-right: 120px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.4s ease-out;
+}
+
+.dot.alt-d {
+    background-color: rgb(60, 172, 206);
+    box-shadow: 0px 0px 10px rgb(60, 172, 206);
+}
+
+.dot2 {
+    margin-left: 50px;
+}
+
+.feet {
+    width: 800px;
+    height: 10px;
+    display: flex;
+}
+
+.foot {
+    width: 70px;
+    height: 5px;
+    border-width: 3px;
+    border-style: none;
+    border-radius: 0px 0px 5px 5px;
+    color: rgb(161, 161, 161);
+    background-color: rgb(39, 39, 39);
+    box-shadow: 5px 5px 12px rgba(0,0,0,.0), inset 3px 3px 5px rgba(255, 255, 255, 0.0), inset -3px -3px 5px rgba(0,0,0,.30);
+    margin-left: 540px;
+}
+
+.second {
+    margin-left: 60px;
+}
