@@ -7,6 +7,7 @@ function play() {
   }
 }
 
+// changing color when the radio is switched on/off
 function switched() {
   const button = document.querySelector('.button');
   const chanels = document.querySelector('.chanels');
@@ -32,11 +33,15 @@ function switched() {
   }
 }
 
+
+// tuner rotating
 const tuner = document.querySelector('.tuner');
+const pointer = document.querySelector('.pointer');
+const line = document.querySelector('.line');
 
 function calculateDegree(e) {
-    const x1 = window.innerWidth / 2;
-    const y1 = window.innerHeight / 2;
+    const x1 = tuner.offsetLeft + tuner.offsetWidth / 2;
+    const y1 = tuner.offsetTop + tuner.offsetHeight / 2;
     const x2 = e.clientX;
     const y2 = e.clientY;
 
@@ -50,7 +55,6 @@ function calculateDegree(e) {
     if (deg < 0) {
       deg = 360 + deg;
   }
-
   return deg;
 }
 
@@ -64,9 +68,60 @@ document.addEventListener("mousemove", function(e) {
   if (isRotating) {
       const result = Math.floor(calculateDegree(e));
       tuner.style.transform = `rotate(${result}deg)`;
+
+      const pointerPosition = result / 360 * (line.offsetWidth - pointer.offsetWidth);
+      pointer.style.left = pointerPosition + "px";
+
+      if (result >= 350) {
+        isRotating = false;}
+        else if (result <= 10) {
+          isRotating = false;
+      }
   }
 });
 
 document.addEventListener("mouseup", function() {
   isRotating = false;
 });
+
+
+// volume rotating
+const volume = document.querySelector('.volume');
+const audio = document.getElementById("audio");
+
+function calculateVolume(e) {
+  const x1 = volume.offsetLeft + volume.offsetWidth / 2;
+  const y1 = volume.offsetTop + volume.offsetHeight / 2;
+  const x2 = e.clientX;
+  const y2 = e.clientY;
+
+  const deltaX = x1 - x2;
+  const deltaY = y1 - y2;
+
+  const rad = Math.atan2(deltaY, deltaX);
+
+  let deg = rad * (180 / Math.PI);
+
+  if (deg < 0) {
+    deg = 360 + deg;
+  }
+  return deg;
+}
+
+let isVolumeRotating = false;
+
+volume.addEventListener("mousedown", function() {
+  isVolumeRotating = true;
+});
+
+document.addEventListener("mousemove", function(e) {
+  if (isVolumeRotating) {
+    const result = Math.floor(calculateVolume(e));
+    volume.style.transform = `rotate(${result}deg)`;
+  }
+});
+
+document.addEventListener("mouseup", function() {
+  isVolumeRotating = false;
+});
+
